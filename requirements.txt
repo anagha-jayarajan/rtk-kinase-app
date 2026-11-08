@@ -5,9 +5,9 @@ streamlit==1.67.0
 plotly==5.24.1
 rdkit==2026.9.1
 py3Dmol==2.5.5
-requests==2.32.4
+requests==2.32.4        →   requests
+scikit-learn==1.6.1     →   scikit-learn
 scipy==1.16.3
-scikit-learn==1.6.1
 pandas==2.2.3
 numpy==2.4.6
 matplotlib==3.10.0

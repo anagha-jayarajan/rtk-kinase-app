@@ -1,0 +1,440 @@
+{
+ "n_mols": 600,
+ "node_dim": 36,
+ "edge_dim": 10,
+ "edge_order_standard": 1.0,
+ "self_loops": 0,
+ "edges_not_bonds": 0,
+ "node": [
+  {
+   "col": 0,
+   "kind": "fit",
+   "name": "sym_C",
+   "a": 1.0000000000000033,
+   "b": -4.159185190376858e-17,
+   "rel_err": 3.3306690738754696e-15,
+   "ok": true
+  },
+  {
+   "col": 1,
+   "kind": "fit",
+   "name": "sym_N",
+   "a": 1.0000000000000009,
+   "b": -3.401415924735234e-17,
+   "rel_err": 8.881784197001252e-16,
+   "ok": true
+  },
+  {
+   "col": 2,
+   "kind": "fit",
+   "name": "sym_O",
+   "a": 0.9999999999999998,
+   "b": -1.407881530375049e-17,
+   "rel_err": 2.220446049250313e-16,
+   "ok": true
+  },
+  {
+   "col": 3,
+   "kind": "fit",
+   "name": "sym_S",
+   "a": 0.9999999999999999,
+   "b": -7.469238965683658e-18,
+   "rel_err": 1.1102230246251565e-16,
+   "ok": true
+  },
+  {
+   "col": 4,
+   "kind": "fit",
+   "name": "sym_F",
+   "a": 1.0000000000000002,
+   "b": -2.156434357736023e-17,
+   "rel_err": 2.220446049250313e-16,
+   "ok": true
+  },
+  {
+   "col": 5,
+   "kind": "fit",
+   "name": "sym_Cl",
+   "a": 1.0,
+   "b": 1.328841939800604e-18,
+   "rel_err": 1.328841939800604e-18,
+   "ok": true
+  },
+  {
+   "col": 6,
+   "kind": "fit",
+   "name": "sym_Br",
+   "a": 1.0000000000000004,
+   "b": -3.601949342009197e-19,
+   "rel_err": 4.440892098500626e-16,
+   "ok": true
+  },
+  {
+   "col": 7,
+   "kind": "fit",
+   "name": "sym_I",
+   "a": 1.0,
+   "b": 6.972220433351536e-19,
+   "rel_err": 6.972220433351536e-19,
+   "ok": true
+  },
+  {
+   "col": 8,
+   "kind": "fit",
+   "name": "sym_P",
+   "a": 1.0000000000000002,
+   "b": 4.954355798434755e-19,
+   "rel_err": 2.220446049250313e-16,
+   "ok": true
+  },
+  {
+   "col": 9,
+   "kind": "fit",
+   "name": "sym_B",
+   "a": 1.0,
+   "b": 6.972220433351536e-19,
+   "rel_err": 6.972220433351536e-19,
+   "ok": true
+  },
+  {
+   "col": 10,
+   "kind": "const",
+   "value": 0.0,
+   "name": "constant",
+   "a": 0.0,
+   "b": 0.0,
+   "rel_err": 0.0,
+   "ok": true
+  },
+  {
+   "col": 11,
+   "kind": "fit",
+   "name": "sym_Se",
+   "a": 1.0,
+   "b": 6.972220433351536e-19,
+   "rel_err": 6.972220433351536e-19,
+   "ok": true
+  },
+  {
+   "col": 12,
+   "kind": "const",
+   "value": 0.0,
+   "name": "constant",
+   "a": 0.0,
+   "b": 0.0,
+   "rel_err": 0.0,
+   "ok": true
+  },
+  {
+   "col": 13,
+   "kind": "const",
+   "value": 0.0,
+   "name": "constant",
+   "a": 0.0,
+   "b": 0.0,
+   "rel_err": 0.0,
+   "ok": true
+  },
+  {
+   "col": 14,
+   "kind": "fit",
+   "name": "hyb_SP",
+   "a": 1.0,
+   "b": 1.3032675770572162e-17,
+   "rel_err": 1.3032675770572162e-17,
+   "ok": true
+  },
+  {
+   "col": 15,
+   "kind": "fit",
+   "name": "hyb_SP2",
+   "a": 1.000000000000009,
+   "b": 2.502770711848113e-16,
+   "rel_err": 9.325873406851315e-15,
+   "ok": true
+  },
+  {
+   "col": 16,
+   "kind": "fit",
+   "name": "hyb_SP3",
+   "a": 0.999999999999998,
+   "b": 2.4324715397930276e-18,
+   "rel_err": 1.9984014443252818e-15,
+   "ok": true
+  },
+  {
+   "col": 17,
+   "kind": "const",
+   "value": 0.0,
+   "name": "constant",
+   "a": 0.0,
+   "b": 0.0,
+   "rel_err": 0.0,
+   "ok": true
+  },
+  {
+   "col": 18,
+   "kind": "const",
+   "value": 0.0,
+   "name": "constant",
+   "a": 0.0,
+   "b": 0.0,
+   "rel_err": 0.0,
+   "ok": true
+  },
+  {
+   "col": 19,
+   "kind": "const",
+   "value": 0.0,
+   "name": "constant",
+   "a": 0.0,
+   "b": 0.0,
+   "rel_err": 0.0,
+   "ok": true
+  },
+  {
+   "col": 20,
+   "kind": "fit",
+   "name": "chiral_CHI_UNSPECIFIED",
+   "a": 1.0000000000000109,
+   "b": 1.1254364054298596e-16,
+   "rel_err": 1.1102230246251565e-14,
+   "ok": true
+  },
+  {
+   "col": 21,
+   "kind": "fit",
+   "name": "chiral_CHI_TETRAHEDRAL_CW",
+   "a": 1.0000000000000002,
+   "b": -8.395373667497028e-18,
+   "rel_err": 2.220446049250313e-16,
+   "ok": true
+  },
+  {
+   "col": 22,
+   "kind": "fit",
+   "name": "chiral_CHI_TETRAHEDRAL_CCW",
+   "a": 1.0,
+   "b": 1.520560672332508e-17,
+   "rel_err": 1.520560672332508e-17,
+   "ok": true
+  },
+  {
+   "col": 23,
+   "kind": "const",
+   "value": 0.0,
+   "name": "constant",
+   "a": 0.0,
+   "b": 0.0,
+   "rel_err": 0.0,
+   "ok": true
+  },
+  {
+   "col": 24,
+   "kind": "fit",
+   "name": "formal_charge",
+   "a": 0.9999999999999998,
+   "b": -1.9175625513413075e-20,
+   "rel_err": 1.1102230246251565e-16,
+   "ok": true
+  },
+  {
+   "col": 25,
+   "kind": "fit",
+   "name": "aromatic",
+   "a": 0.9999999999999952,
+   "b": 7.666308905798111e-18,
+   "rel_err": 4.773959005888173e-15,
+   "ok": true
+  },
+  {
+   "col": 26,
+   "kind": "fit",
+   "name": "num_hs",
+   "a": 1.0000000000000038,
+   "b": -2.2588096674991212e-17,
+   "rel_err": 3.848773152033876e-15,
+   "ok": true
+  },
+  {
+   "col": 27,
+   "kind": "fit",
+   "name": "degree",
+   "a": 1.000000000000001,
+   "b": -1.1796251733031805e-16,
+   "rel_err": 1.4802973661668755e-15,
+   "ok": true
+  },
+  {
+   "col": 28,
+   "kind": "fit",
+   "name": "hbond_donor",
+   "a": 1.0000000000000004,
+   "b": 4.688379011079082e-17,
+   "rel_err": 4.440892098500626e-16,
+   "ok": true
+  },
+  {
+   "col": 29,
+   "kind": "fit",
+   "name": "fam_Acceptor",
+   "a": 1.0,
+   "b": 0.0,
+   "rel_err": 0.0001,
+   "ok": true,
+   "seen_on": {
+    "F": 266,
+    "N": 1307,
+    "O": 1605
+   }
+  },
+  {
+   "col": 30,
+   "kind": "fit",
+   "name": "fam_Aromatic",
+   "a": 0.9999999999999999,
+   "b": -6.118509347811599e-17,
+   "rel_err": 2.220446049250313e-16,
+   "ok": true
+  },
+  {
+   "col": 31,
+   "kind": "fit",
+   "name": "fam_Hydrophobe",
+   "a": 0.9999999999999986,
+   "b": -3.3312269139632617e-17,
+   "rel_err": 1.4432899320127035e-15,
+   "ok": true
+  },
+  {
+   "col": 32,
+   "kind": "fit",
+   "name": "fam_LumpedHydrophobe",
+   "a": 1.0000000000000007,
+   "b": 5.0318353538179856e-17,
+   "rel_err": 6.661338147750939e-16,
+   "ok": true
+  },
+  {
+   "col": 33,
+   "kind": "fit",
+   "name": "fam_PosIonizable",
+   "a": 1.0,
+   "b": 2.6731439281099796e-17,
+   "rel_err": 2.6731439281099796e-17,
+   "ok": true
+  },
+  {
+   "col": 34,
+   "kind": "fit",
+   "name": "fam_NegIonizable",
+   "a": 1.0000000000000002,
+   "b": 3.258271441382007e-18,
+   "rel_err": 2.220446049250313e-16,
+   "ok": true
+  },
+  {
+   "col": 35,
+   "kind": "fit",
+   "name": "fam_ZnBinder",
+   "a": 1.0000000000000002,
+   "b": -4.189875500917458e-18,
+   "rel_err": 2.220446049250313e-16,
+   "ok": true
+  }
+ ],
+ "edge": [
+  {
+   "col": 0,
+   "kind": "fit",
+   "name": "bond_single",
+   "a": 0.9999999999999981,
+   "b": 5.76260837036085e-17,
+   "rel_err": 1.7763568394002505e-15,
+   "ok": true
+  },
+  {
+   "col": 1,
+   "kind": "fit",
+   "name": "bond_double",
+   "a": 0.9999999999999999,
+   "b": 1.8494512637230564e-17,
+   "rel_err": 1.1102230246251565e-16,
+   "ok": true
+  },
+  {
+   "col": 2,
+   "kind": "fit",
+   "name": "bond_triple",
+   "a": 1.0000000000000002,
+   "b": 6.146205289834672e-18,
+   "rel_err": 2.220446049250313e-16,
+   "ok": true
+  },
+  {
+   "col": 3,
+   "kind": "fit",
+   "name": "bond_aromatic",
+   "a": 0.9999999999999951,
+   "b": -1.8389997090906088e-18,
+   "rel_err": 4.884981308350689e-15,
+   "ok": true
+  },
+  {
+   "col": 4,
+   "kind": "fit",
+   "name": "stereo_STEREONONE",
+   "a": 0.9999999999999966,
+   "b": 1.344835199458633e-16,
+   "rel_err": 3.3306690738754696e-15,
+   "ok": true
+  },
+  {
+   "col": 5,
+   "kind": "fit",
+   "name": "stereo_STEREOZ",
+   "a": 0.9999999999999997,
+   "b": -2.4642992658970264e-18,
+   "rel_err": 3.3306690738754696e-16,
+   "ok": true
+  },
+  {
+   "col": 6,
+   "kind": "fit",
+   "name": "stereo_STEREOE",
+   "a": 1.0000000000000004,
+   "b": -1.638462632009454e-18,
+   "rel_err": 4.440892098500626e-16,
+   "ok": true
+  },
+  {
+   "col": 7,
+   "kind": "const",
+   "value": 0.0,
+   "name": "constant",
+   "a": 0.0,
+   "b": 0.0,
+   "rel_err": 0.0,
+   "ok": true
+  },
+  {
+   "col": 8,
+   "kind": "fit",
+   "name": "conjugated",
+   "a": 1.0000000000000013,
+   "b": -1.438847550383284e-16,
+   "rel_err": 1.1102230246251565e-15,
+   "ok": true
+  },
+  {
+   "col": 9,
+   "kind": "fit",
+   "name": "bond_in_ring",
+   "a": 0.9999999999999981,
+   "b": 6.393341396847241e-17,
+   "rel_err": 1.7763568394002505e-15,
+   "ok": true
+  }
+ ],
+ "verified": true
+}

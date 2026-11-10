@@ -2,8 +2,6 @@ import os, numpy as np, pandas as pd, torch, streamlit as st
 import plotly.graph_objects as go, plotly.express as px
 from rdkit import Chem, DataStructs
 from rdkit.Chem import Draw, Descriptors, rdFingerprintGenerator
-from sklearn.metrics import r2_score, mean_absolute_error
-from scipy.stats import spearmanr
 from model import load_model, interaction
 
 ROOT = os.environ.get("RTK_ROOT", os.path.dirname(os.path.abspath(__file__)))
@@ -86,7 +84,6 @@ def get_train_fps():
 model, pkg = get_model()
 test_df = get_test()
 kinases = pkg["kinases"]
-vm, tm = pkg["val_metrics"], pkg["test_metrics"]
 
 
 # DARK_FIX: readable headings on a dark page
@@ -127,7 +124,7 @@ st.markdown("""
 
 st.markdown('<div style="height:10px"></div>', unsafe_allow_html=True)
 
-tab_pred, tab_perf, tab_about = st.tabs(["Predict", "Model performance", "About & limitations"])
+tab_pred, tab_about = st.tabs(["Predict", "About & limitations"])
 
 # ---------------------------------------------------------------- PREDICT
 import requests
@@ -459,44 +456,6 @@ with tab_pred:
         render_predict()
     except Exception as e:
         st.error(f"The Predict tab hit an error: {e}")
-        st.exception(e)
-
-# ---------------------------------------------------------------- PERFORMANCE
-def render_perf():
-    st.markdown('<div class="section">Validation and test metrics</div>', unsafe_allow_html=True)
-    perf = pd.DataFrame({"Validation": vm, "Test": tm}).T[["r2", "rmse", "mae", "pearson", "spearman"]].round(3)
-    perf.columns = ["R²", "RMSE", "MAE", "Pearson r", "Spearman ρ"]
-    st.dataframe(perf, use_container_width=True)
-
-    st.markdown('<div class="section">Predicted vs experimental pIC50 (test set)</div>', unsafe_allow_html=True)
-    s = test_df.sample(min(5000, len(test_df)), random_state=0)
-    sc = px.scatter(s, x="pIC50_median", y="y_pred", opacity=.35, color_discrete_sequence=[TEAL],
-                    labels={"pIC50_median": "Experimental pIC50", "y_pred": "Predicted pIC50"})
-    lo, hi = float(s.pIC50_median.min()), float(s.pIC50_median.max())
-    sc.add_trace(go.Scatter(x=[lo, hi], y=[lo, hi], mode="lines", line=dict(color="#AAB8CC", dash="dash"), name="y = x"))
-    sc.update_layout(height=480, plot_bgcolor="rgba(0,0,0,0)", font=dict(family="Inter"))
-    st.plotly_chart(sc, use_container_width=True)
-
-    st.markdown('<div class="section">Per-kinase accuracy (test, n ≥ 30)</div>', unsafe_allow_html=True)
-    rows = [{"UniProt": t, "n": len(g), "R²": r2_score(g.pIC50_median, g.y_pred),
-             "MAE": mean_absolute_error(g.pIC50_median, g.y_pred),
-             "Spearman": spearmanr(g.pIC50_median, g.y_pred)[0]}
-            for t, g in test_df.groupby("UniProt_ID") if len(g) >= 30]
-    st.dataframe(pd.DataFrame(rows).sort_values("R²", ascending=False).round(3), use_container_width=True, height=420)
-
-    hist = f"{ROOT}/training_history_v2.csv"
-    if os.path.exists(hist):
-        h = pd.read_csv(hist)
-        st.markdown('<div class="section">Training history</div>', unsafe_allow_html=True)
-        st.plotly_chart(px.line(h, x="epoch", y=["train_mse", "val_mse"], color_discrete_sequence=["#AAB8CC", TEAL]),
-                        use_container_width=True)
-
-
-with tab_perf:
-    try:
-        render_perf()
-    except Exception as e:
-        st.error(f"The Performance tab hit an error: {e}")
         st.exception(e)
 
 # ---------------------------------------------------------------- ABOUT

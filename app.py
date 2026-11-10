@@ -44,11 +44,6 @@ html, body, [class*="css"] {{ font-family: 'Inter', sans-serif; color:{INK}; }}
 .hero h1 {{ font-size:2.8rem; font-weight:800; line-height:1.12; letter-spacing:-0.03em; margin:12px 0 16px 0; color:white; }}
 .hero p {{ font-size:1.08rem; color:#C9D8EA; max-width:640px; line-height:1.6; margin:0; }}
 
-.kpi {{ background:white; border:1px solid #E6EBF2; border-radius:14px; padding:20px 22px;
-        box-shadow:0 2px 10px rgba(11,31,58,.04); }}
-.kpi .v {{ font-size:1.9rem; font-weight:800; color:{NAVY}; letter-spacing:-0.02em; }}
-.kpi .l {{ font-size:.78rem; color:{MUTED}; font-weight:600; text-transform:uppercase; letter-spacing:.08em; }}
-
 .card {{ background:white; border:1px solid #E6EBF2; border-radius:14px; padding:22px 24px;
          box-shadow:0 2px 10px rgba(11,31,58,.04); margin-bottom:16px; }}
 .section {{ font-size:1.35rem; font-weight:700; letter-spacing:-0.02em; margin:26px 0 4px 0; color:{NAVY}; }}
@@ -94,9 +89,6 @@ kinases = pkg["kinases"]
 vm, tm = pkg["val_metrics"], pkg["test_metrics"]
 
 
-
-
-
 # DARK_FIX: readable headings on a dark page
 st.markdown("""<style>
 .nav { border-bottom:1px solid #2E3846 !important; }
@@ -133,10 +125,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-k1, k2, k3, k4 = st.columns(4)
-for col, val, lab in [(k1, f"{tm['r2']:.2f}", "Test R²"), (k2, f"{tm['rmse']:.2f}", "Test RMSE (pIC50)"),
-                      (k3, f"{tm['spearman']:.2f}", "Test Spearman ρ"), (k4, f"{len(kinases)}", "Supported kinases")]:
-    col.markdown(f'<div class="kpi"><div class="v">{val}</div><div class="l">{lab}</div></div>', unsafe_allow_html=True)
+st.markdown('<div style="height:10px"></div>', unsafe_allow_html=True)
 
 tab_pred, tab_perf, tab_about = st.tabs(["Predict", "Model performance", "About & limitations"])
 
